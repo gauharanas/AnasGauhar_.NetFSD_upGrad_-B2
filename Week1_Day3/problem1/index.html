@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .profile-card {
+            width: 320px;
+            background-color: white;
+            border: 2px solid #ccc;
+            border-radius: 12px;
+            padding: 20px;            
+            margin: 20px;      
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .profile-username {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .profile-title {
+            font-size: 14px;
+            color: #555;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .profile-desc {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-card">
+        <div class="profile-username">Anas Gauhar</div>
+        <div class="profile-title">.NET Developer</div>
+        <div class="profile-desc">
+            Passionate developer focused on building scalable 
+            web applications and clean backend architecture.
+        </div>
+
+        <button class="contact-btn">Contact Me</button>
+    </div>
+
+</body>
