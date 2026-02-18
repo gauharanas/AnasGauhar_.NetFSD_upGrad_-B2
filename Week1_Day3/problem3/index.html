@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Cool Car Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; /* Softer gray */
+        }
+
+        /* Top banner */
+        .top-banner {
+            background-color: #1e3a8a; /* Cleaner blue */
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .top-banner h1 {
+            margin: 0;
+        }
+
+        .main-area {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        /* Card */
+        .box {
+            background-color: white;
+            border-radius: 10px;  /* Rounded corners */
+            margin: 15px;
+            padding: 20px;
+            width: 300px;
+            flex-grow: 1;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Soft shadow */
+            transition: transform 0.2s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px); /* Small lift effect */
+        }
+
+        .box h2 {
+            color: #c1121f; /* Deep red */
+            margin-top: 0;
+        }
+
+        .box p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Button */
+        .click-btn {
+            background-color: #16a34a; /* Modern green */
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .click-btn:hover {
+            background-color: #15803d;
+        }
+
+        /* Footer */
+        .bottom-part {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-banner">
+        <h1>THE TURBO ZONE</h1>
+        <p>Best Cars and Bikes in the World!!!</p>
+    </div>
+
+    <div class="main-area">
+
+        <div class="box">
+            <h2>Ford Mustang GT</h2>
+            <p>This is a classic American muscle car. It has a V8 engine and makes a very loud noise when you drive it fast.</p>
+            <button class="click-btn">READ MORE</button>
+        </div>
+
+        <div class="box">
+            <h2>Ducati Panigale</h2>
+            <p>This is a super fast red bike from Italy. It looks very cool but it is dangerous if you don't know how to ride.</p>
+            <button class="click-btn">READ MORE</button>
+        </div>
+
+        <div class="box">
+            <h2>Tesla Cybertruck</h2>
+            <p>It looks like a metal triangle. It is electric and bulletproof. Some people love it and some people hate it.</p>
+            <button class="click-btn">READ MORE</button>
+        </div>
+
+        <div class="box">
+            <h2>Kawasaki Ninja</h2>
+            <p>The green monster. This bike is very popular for racing and it goes extremely fast on the highway.</p>
+            <button class="click-btn">READ MORE</button>
+        </div>
+
+        <div class="box">
+            <h2>Toyota Supra</h2>
+            <p>Legendary JDM car. Tuners love this car because you can modify the engine to have 1000 horsepower.</p>
+            <button class="click-btn">READ MORE</button>
+        </div>
+
+        <div class="box">
+            <h2>Harley Davidson</h2>
+            <p>For people who like to cruise slowly and wear leather jackets. It has a very distinct sound.</p>
+            <button class="click-btn">READ MORE</button>
+        </div>
+
+    </div>
+
+    <div class="bottom-part">
+        <p>Copyright 2024 - Car Lover Blog</p>
+    </div>
+
+</body>
+</html>
