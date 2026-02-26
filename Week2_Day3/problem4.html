@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Search</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+        }
+        input {
+            padding: 8px;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 6px;
+            background: #f4f4f4;
+            margin: 5px 0;
+        }
+        #noResults {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="searchInput" placeholder="Search product...">
+    <ul id="productList"></ul>
+    <div id="noResults">No Results Found</div>
+
+    <script>
+        const products = [
+            "Laptop",
+            "Smartphone",
+            "Headphones",
+            "Keyboard",
+            "Mouse",
+            "Monitor",
+            "Charger",
+            "Tablet"
+        ];
+
+        const searchInput = document.getElementById("searchInput");
+        const productList = document.getElementById("productList");
+        const noResults = document.getElementById("noResults");
+
+        function displayProducts(list) {
+            productList.innerHTML = "";
+            list.forEach(product => {
+                const li = document.createElement("li");
+                li.textContent = product;
+                productList.appendChild(li);
+            });
+        }
+
+        searchInput.addEventListener("input", () => {
+            const value = searchInput.value.toLowerCase();
+            const filtered = products.filter(product =>
+                product.toLowerCase().includes(value)
+            );
+
+            displayProducts(filtered);
+
+            noResults.style.display = filtered.length === 0 ? "block" : "none";
+        });
+
+        displayProducts(products);
+    </script>
+
+</body>
+</html>
