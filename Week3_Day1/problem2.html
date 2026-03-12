@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>FAQ</title>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+
+.answer{
+display:none;
+margin-left:20px;
+}
+
+.active{
+color:blue;
+font-weight:bold;
+}
+
+.question{
+cursor:pointer;
+margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>FAQ Section</h2>
+
+<div class="faq">
+
+<div class="question">What is jQuery?</div>
+<div class="answer">jQuery is a JavaScript library.</div>
+
+<div class="question">Why use jQuery?</div>
+<div class="answer">It simplifies DOM manipulation.</div>
+
+<div class="question">Is jQuery still used?</div>
+<div class="answer">Yes, especially in legacy systems.</div>
+
+<div class="question">Is jQuery fast?</div>
+<div class="answer">Yes, it reduces coding complexity.</div>
+
+<div class="question">Is jQuery easy?</div>
+<div class="answer">Yes, syntax is simple.</div>
+
+</div>
+
+<script>
+
+$(".question").click(function(){
+
+$(this).next(".answer").slideToggle();
+
+$(this).toggleClass("active");
+
+});
+
+</script>
+
+</body>
+</html>
