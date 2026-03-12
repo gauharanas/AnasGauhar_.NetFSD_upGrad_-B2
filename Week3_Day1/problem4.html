@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Todo App</title>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+
+.completed{
+text-decoration:line-through;
+color:gray;
+}
+
+li{
+margin:8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>To Do List</h2>
+
+<input type="text" id="taskInput">
+
+<button id="addTask">Add</button>
+
+<p>Total Tasks: <span id="total">0</span></p>
+<p>Completed Tasks: <span id="done">0</span></p>
+
+<ul id="taskList"></ul>
+
+<script>
+
+var total=0;
+var completed=0;
+
+$("#addTask").click(function(){
+
+var task=$("#taskInput").val();
+
+if(task=="") return;
+
+$("#taskList").append("<li>"+task+" <button class='complete'>Done</button> <button class='delete'>Delete</button></li>");
+
+$("#taskInput").val("");
+
+total++;
+
+$("#total").text(total);
+
+});
+
+
+$("#taskList").on("click",".complete",function(){
+
+$(this).parent().toggleClass("completed");
+
+completed++;
+
+$("#done").text(completed);
+
+});
+
+
+$("#taskList").on("click",".delete",function(){
+
+$(this).parent().remove();
+
+total--;
+
+$("#total").text(total);
+
+});
+
+</script>
+
+</body>
+</html>
